@@ -1,0 +1,19 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    int arr[5] = { 10, 20, 30, 40, 50};
+    int sum = 0, product = 1;
+    int size = sizeof(arr) / sizeof(int);
+    int i = 0;
+    while(i < size)
+    {
+        sum = sum + arr[i];
+        product = product * arr[i];
+        i++;
+    }
+    cout << "Sum = " << sum << endl;
+    cout << "product = " << product << endl;
+    
+}
