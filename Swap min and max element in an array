@@ -1,0 +1,47 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    int arr[5] = {10, 20, 30, 40, 50};
+    int max = arr[0]; // variable for getting maximum value
+    int min = arr[0]; // variable for getting minimum value
+    int imax = 0, imin = 0; // index of max and min element
+
+    for (int i = 0; i < 5 ; i++)
+    {
+        if (arr[i] > max)
+        {
+            max = arr[i];
+            imax = i;
+        }
+        if (arr[i] < min)
+        {
+            min = arr[i];
+            imin = i;
+        }
+    }
+    cout << "Values Before swapping : " << endl; // printing original values
+
+    cout << "Max Value : " << arr[imax] << " at index : " << imax << endl;
+    cout << "Min Value : " << arr[imin] << " at index : " << imin << endl << endl;
+
+    swap(arr[imax],arr[imin]); // swap function to swap
+
+    cout << "Values After swapping : " << endl; // printing swapped values
+
+    cout << "Value at index : " << imax << " is " << arr[imax] << endl;
+    cout << "Value at index : " << imin << " is " << arr[imin] << endl;
+    
+/*
+Output :-
+Values Before swapping : 
+Max Value : 50 at index : 4
+Min Value : 10 at index : 0
+
+Values After swapping : 
+Value at index : 4 is 10
+Value at index : 0 is 50
+*/
+    return 0;
+}
